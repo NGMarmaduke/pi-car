@@ -1,0 +1,29 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>PiCar v2</title>
+    <script src="socket.io/socket.io.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.1.0.slim.min.js"
+      integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="
+      crossorigin="anonymous">
+    </script>
+    <script src="client.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <img id="image" />
+
+    <div id="arrows">
+      <div class="arrow" id="up-arrow">&#8679;</div>
+      <div class="arrow" id="right-arrow">&#8679;</div>
+      <div class="arrow" id="down-arrow">&#8679;</div>
+      <div class="arrow" id="left-arrow">&#8679;</div>
+    </div>
+
+    <script type="text/javascript">
+      var stream = `http://${ window.location.hostname }:8080/html/cam_pic_new.php`
+      document.getElementById('image').setAttribute('src', stream);
+    </script>
+  </body>
+</html>
